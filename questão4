@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void) {
+  int N, quant;
+  double E = 1, fat = 1;
+
+  printf("Digite o valor de N: ");
+  scanf("%f", &N);
+//for é uma estrutura de repetição composta por 3 expressões dentro do parentese, a de inicialização, condição e atualização.
+  for (quant = 1; quant <= N; quant++) {
+    fat = fat * quant;
+    E = E * 1 / (fat);
+  }
+  printf("\nO valor de E é %.91f", E);
+  return 0;
+}
