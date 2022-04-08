@@ -1,0 +1,32 @@
+#include <stdio.h>
+//define variaveis globais
+float ms = 0;
+int fil = 0, filho = 0;
+
+float mediaSalario(int n, float *Mediafilho) {
+  float salario = 0, soma = 0, media = 0, somafilho=0;
+  for (int x = 1; x <= n; x++) {
+    printf("Digite o valor do salario recebido\n");
+    scanf("%f", &salario);
+    soma += salario;
+    if (ms < salario) {
+      ms = salario;
+    }
+    printf("Numeros de filhos: \n");
+    scanf("%d", &filho);
+    somafilho+=filho;
+    *Mediafilho = somafilho / n;
+  }
+  media = soma / n;
+  return media;
+}
+
+int main(void) {
+  int n;
+  float m = 0;
+  printf("Digite o número de cidadãos participantes dessa pesquisa: \n");
+  scanf("%d", &n);
+  printf("A media é: R$%2.f,00", mediaSalario(n, &m));
+  printf("\nO maior salario é: R$%2.f,00", ms);
+  printf("\nA media de filhos é %.2f", m);
+}
