@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+  int N, NEG=0, POS=0, ZERO=0;
+  printf("escreva uma sequencia de valores inteiros\n");
+  do { // uma estrutura de repetição que executa depois verifica a condição
+    scanf("%d", &N);
+    if (N < 0) {
+      NEG++;
+    } else if (N == 0) {
+      ZERO++;
+    } else {
+     POS++; }
+
+  } while (N != 123); //ja o while ele verifica depois exuta a condição caso seja verdadeira. quanto digitado o numero 123, imprime os valores 
+  printf("quantidade de negativos:%d", NEG);
+  printf("\nquantidade de positivos:%d", POS);
+  printf("\nquantidade de zeros:%d", ZERO);
+  return 0;
+}
